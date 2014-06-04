@@ -1,0 +1,8 @@
+Running and Installing the application
+======================================
+
+Copy TrayMoon.exe file in to C:\ folder and run it from there. The program 
+should self install itself in the registry and will be started each time your 
+Microsoft Windows is started.
+
+

@@ -1,0 +1,2 @@
+2004-12-15 Mohammad Hafiz <mypapit@gmail.com>
+    * first public release 

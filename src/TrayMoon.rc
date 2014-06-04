@@ -1,0 +1,190 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "TrayMoon.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Configure",                  ID_FILE_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh",                    ID_FILE_REFRESH
+        MENUITEM "&Exit",                       ID_FILE_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG DIALOGEX 0, 0, 197, 131
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "TrayMoon 1.00"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,76,110,50,14
+    ICON            904,ID_IMEJBULAN,7,7,20,20
+    LTEXT           "Display moon phases in System Tray",IDC_STATIC,39,7,151,
+                    14
+    CTEXT           "Hari bulan Melayu",IDC_HIJRAH,7,47,183,10
+    CTEXT           "Keadaan bulan",IDC_BULAN,7,57,183,10
+    LTEXT           "Copyright (C)  mypapit, 2004",IDC_STATIC,39,17,144,8
+    LTEXT           "Info : papit58@yahoo.com",IDC_STATIC,39,28,144,8
+    CONTROL         "Use Malay Hijri Dates",IDC_MALAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,57,85,83,10
+    CONTROL         "Start with Windows",IDC_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,57,72,82,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON9               ICON                    "Galaxy.ico"
+900                     ICON                    "bulan1.ico"
+901                     ICON                    "bulan2.ico"
+902                     ICON                    "bulan3.ico"
+903                     ICON                    "bulan4.ico"
+904                     ICON                    "bulan5.ico"
+905                     ICON                    "bulan6.ico"
+906                     ICON                    "bulan7.ico"
+907                     ICON                    "bulan8.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Display moon phases in System Tray"
+            VALUE "CompanyName", "http://mypapit.net"
+            VALUE "FileDescription", "TrayMoon-Display moon phases in System Tray"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TrayMoon"
+            VALUE "LegalCopyright", "Copyright (C)  mypapit, 2004"
+            VALUE "LegalTrademarks", "mypapit.net"
+            VALUE "OriginalFilename", "TrayMoon.exe"
+            VALUE "ProductName", " TrayMoon"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

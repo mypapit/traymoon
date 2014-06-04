@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+Copyright (c) 2003, 2004, Mypapit
+All rights reserved.
+
+Questions should be send to :
+
+email 1 : papit58 (at) yahoo.com
+email 2 : papit01 (at) lycos.com
+-->
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+<assemblyIdentity version="1.2.0.0" processorArchitecture="X86" name="TrayMoon" type="win32" />
+<description>TrayMoon</description>
+<dependency>
+<dependentAssembly>
+<assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" processorArchitecture="X86" publicKeyToken="6595b64144ccf1df" language="*" />
+</dependentAssembly>
+</dependency>
+</assembly>
