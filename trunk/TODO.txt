@@ -1,0 +1,5 @@
+- add option to rotate the lunar image.
+- change the lunar image graphics(?)
+- maybe a reminder of important hijri date ( 1 muharram, 10 zulhijjah, 1 syawal, etc)
+
+Suggestion? Please forward at mypapit@gmail.com
