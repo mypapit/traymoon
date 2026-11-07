@@ -1,7 +1,7 @@
 /*
 	registry.c - registry functions
 
-	Copyright (C) 2004 Mohammad Hafiz bin Ismail
+	Copyright © 2004 Mohammad Hafiz bin Ismail
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -52,10 +52,19 @@ int read_registry( struct tmData *data)
 		return error;
 
 	RegQueryValueEx( key1, "appPath", NULL, NULL, (BYTE*) &data->appPath, &len );
+	datasize = sizeof(int);
 	RegQueryValueEx( key1, "useMalay", NULL, NULL, (BYTE*) &data->malay, &datasize );
 	//RegQueryValueEx( key1, "CascadeMenu", NULL, NULL, (BYTE*) &data->cascade, &datasize );
+	datasize = sizeof(int);
 	RegQueryValueEx( key1, "Splash", NULL, NULL, (BYTE*) &data->splash, &datasize );
+	datasize = sizeof(int);
 	RegQueryValueEx( key1, "Startup", NULL, NULL, (BYTE*) &data->startup, &datasize );
+	datasize = sizeof(int);
+	RegQueryValueEx( key1, "Rotate", NULL, NULL, (BYTE*) &data->rotate, &datasize );
+	datasize = sizeof(int);
+	RegQueryValueEx( key1, "Style", NULL, NULL, (BYTE*) &data->style, &datasize );
+	datasize = sizeof(int);
+	RegQueryValueEx( key1, "Reminder", NULL, NULL, (BYTE*) &data->reminder, &datasize );
 
 	RegCloseKey( key1 );
 
@@ -86,6 +95,9 @@ int save_registry( struct tmData *data)
 	RegSetValueEx( key1, "useMalay", 0, REG_DWORD, (CONST BYTE*) &data->malay, sizeof( int ) );
 //	RegQueryValueEx( key1, "useMalay", NULL, NULL, (BYTE*) &data->malay, &datasize );
 	RegSetValueEx( key1, "Splash", 0, REG_DWORD, (CONST BYTE*) &data->splash, sizeof( int ) );
+	RegSetValueEx( key1, "Rotate", 0, REG_DWORD, (CONST BYTE*) &data->rotate, sizeof( int ) );
+	RegSetValueEx( key1, "Style", 0, REG_DWORD, (CONST BYTE*) &data->style, sizeof( int ) );
+	RegSetValueEx( key1, "Reminder", 0, REG_DWORD, (CONST BYTE*) &data->reminder, sizeof( int ) );
 	RegSetValueEx( key1, "appPath", 0, REG_SZ, (CONST BYTE*) &data->appPath, 280 );
 
 
@@ -114,12 +126,10 @@ int enable_autorun(int flag, HINSTANCE hInstance)
 
 	if (flag==TRUE){
 		GetModuleFileName(hInstance, szFileName, MAX_PATH);
-		RegSetValueEx( key1, "TrayMoon(mypapit)", 0, REG_SZ, (CONST BYTE*) &szFileName, strlen(szFileName) );
+		RegSetValueEx( key1, "TrayMoon(mypapit)", 0, REG_SZ, (CONST BYTE*) szFileName, (DWORD)(lstrlen(szFileName) + 1) );
 	}
-
 	else {
-		lstrcpy(szFileName," ");
-		RegSetValueEx( key1, "TrayMoon(mypapit)", 0, REG_SZ, (CONST BYTE*) &szFileName, strlen(szFileName) );
+		RegDeleteValue( key1, "TrayMoon(mypapit)" );
 	}
 
 	RegCloseKey( key1 );

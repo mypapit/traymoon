@@ -1,5 +1,5 @@
-- add option to rotate the lunar image.
-- change the lunar image graphics(?)
-- maybe a reminder of important hijri date ( 1 muharram, 10 zulhijjah, 1 syawal, etc)
+- [x] add option to rotate the lunar image (0, 90, 180, 270 deg for Northern/Equatorial/Southern views).
+- [x] change the lunar image graphics (added Smooth Silver, Warm Gold procedural 32-bit icons + res/modern/*.ico alongside Classic icons).
+- [x] reminder of important hijri date (1 Muharram, 10 Zulhijjah, 1 Syawal, Maulidur Rasul, Ramadan, etc. with tray balloon notification and Hijri Events list).
 
 Suggestion? Please forward at mypapit@gmail.com

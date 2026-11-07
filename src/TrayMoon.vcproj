@@ -83,7 +83,7 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="wcrt.lib comctl32.lib"
+				AdditionalDependencies="wcrt.lib comctl32.lib gdi32.lib user32.lib shell32.lib advapi32.lib"
 				OutputFile="$(OutDir)/TrayMoon.exe"
 				LinkIncremental="1"
 				IgnoreAllDefaultLibraries="TRUE"
@@ -145,41 +145,41 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
 			<File
-				RelativePath=".\bulan1.ico">
+				RelativePath="..\res\bulan1.ico">
 			</File>
 			<File
-				RelativePath=".\bulan2.ico">
+				RelativePath="..\res\bulan2.ico">
 			</File>
 			<File
-				RelativePath=".\bulan3.ico">
+				RelativePath="..\res\bulan3.ico">
 			</File>
 			<File
-				RelativePath=".\bulan4.ico">
+				RelativePath="..\res\bulan4.ico">
 			</File>
 			<File
-				RelativePath=".\bulan5.ico">
+				RelativePath="..\res\bulan5.ico">
 			</File>
 			<File
-				RelativePath=".\bulan6.ico">
+				RelativePath="..\res\bulan6.ico">
 			</File>
 			<File
-				RelativePath=".\bulan7.ico">
+				RelativePath="..\res\bulan7.ico">
 			</File>
 			<File
-				RelativePath=".\bulan8.ico">
+				RelativePath="..\res\bulan8.ico">
 			</File>
 			<File
-				RelativePath=".\Galaxy.ico">
+				RelativePath="..\res\Galaxy.ico">
 			</File>
 			<File
-				RelativePath=".\icon9.ico">
+				RelativePath="..\res\icon9.ico">
 			</File>
 			<File
 				RelativePath=".\TrayMoon.rc">
 			</File>
 		</Filter>
 		<File
-			RelativePath=".\TrayMoon.exe.manifest">
+			RelativePath="..\res\TrayMoon.exe.manifest">
 		</File>
 	</Files>
 	<Globals>

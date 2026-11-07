@@ -1,7 +1,7 @@
 /*
 	resource.h - resource definitions file
 
-	Copyright (C) 2004 Mohammad Hafiz bin Ismail
+	Copyright © 2004 Mohammad Hafiz bin Ismail
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -42,14 +42,27 @@
 #define IDI_ICON6                       905
 #define IDI_ICON7                       906
 #define IDI_ICON8                       907
+#define IDI_MODERN_ICON1                910
+#define IDI_MODERN_ICON2                911
+#define IDI_MODERN_ICON3                912
+#define IDI_MODERN_ICON4                913
+#define IDI_MODERN_ICON5                914
+#define IDI_MODERN_ICON6                915
+#define IDI_MODERN_ICON7                916
+#define IDI_MODERN_ICON8                917
 #define IDC_HIJRAH                      1002
 #define IDC_BULAN                       1003
 #define IDC_MALAY                       1004
 #define IDC_STARTUP                     1005
 #define ID_IMEJBULAN                    1007
+#define IDC_REMINDER                    1008
+#define IDC_ROTATE                      1009
 #define IDC_DATETIMEPICKER2             1010
+#define IDC_STYLE                       1011
+#define IDC_EVENT_INFO                  1012
 #define ID_FILE_ABOUT                   40001
 #define ID_FILE_REFRESH                 40002
+#define ID_FILE_REMINDERS               40003
 #define ID_FILE_EXIT                    40004
 
 // Next default values for new objects
@@ -59,7 +72,7 @@
 #define _APS_NO_MFC                     1
 #define _APS_NEXT_RESOURCE_VALUE        123
 #define _APS_NEXT_COMMAND_VALUE         40005
-#define _APS_NEXT_CONTROL_VALUE         1011
+#define _APS_NEXT_CONTROL_VALUE         1013
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

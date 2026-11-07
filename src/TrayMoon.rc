@@ -7,7 +7,10 @@
 //
 // Generated from the TEXTINCLUDE 2 resource.
 //
-#include "afxres.h"
+#include <windows.h>
+#ifndef IDC_STATIC
+#define IDC_STATIC (-1)
+#endif
 
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
@@ -52,7 +55,9 @@ END
 // RT_MANIFEST
 //
 
-1                       RT_MANIFEST             "TrayMoon.exe.manifest"
+#ifndef __MINGW32__
+1                       RT_MANIFEST             "../res/TrayMoon.exe.manifest"
+#endif
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -64,6 +69,7 @@ BEGIN
     POPUP "&File"
     BEGIN
         MENUITEM "&Configure",                  ID_FILE_ABOUT
+        MENUITEM "Hijri &Events...",            ID_FILE_REMINDERS
         MENUITEM SEPARATOR
         MENUITEM "&Refresh",                    ID_FILE_REFRESH
         MENUITEM "&Exit",                       ID_FILE_EXIT
@@ -76,24 +82,36 @@ END
 // Dialog
 //
 
-IDD_DIALOG DIALOGEX 0, 0, 197, 131
+IDD_DIALOG DIALOGEX 0, 0, 220, 198
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
     WS_SYSMENU
-CAPTION "TrayMoon 1.00"
+CAPTION "TrayMoon 1.10"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,76,110,50,14
-    ICON            904,ID_IMEJBULAN,7,7,20,20
-    LTEXT           "Display moon phases in System Tray",IDC_STATIC,39,7,151,
-                    14
-    CTEXT           "Hari bulan Melayu",IDC_HIJRAH,7,47,183,10
-    CTEXT           "Keadaan bulan",IDC_BULAN,7,57,183,10
-    LTEXT           "Copyright (C)  mypapit, 2004",IDC_STATIC,39,17,144,8
-    LTEXT           "Info : papit58@yahoo.com",IDC_STATIC,39,28,144,8
-    CONTROL         "Use Malay Hijri Dates",IDC_MALAY,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,57,85,83,10
+    ICON            904,ID_IMEJBULAN,10,8,20,20
+    LTEXT           "Display moon phases in System Tray",IDC_STATIC,40,7,170,
+                    10
+    LTEXT           "Copyright \xA9 mypapit, 2004",IDC_STATIC,40,17,170,8
+    LTEXT           "Info : mypapit@gmail.com",IDC_STATIC,40,27,170,8
+    GROUPBOX        "Current Lunar & Hijri Status",IDC_STATIC,7,40,206,46
+    CTEXT           "Hari bulan Melayu",IDC_HIJRAH,13,51,194,10
+    CTEXT           "Keadaan bulan",IDC_BULAN,13,62,194,10
+    CTEXT           "Tiada peristiwa hari ini",IDC_EVENT_INFO,13,73,194,10
+    GROUPBOX        "Options",IDC_STATIC,7,90,206,82
     CONTROL         "Start with Windows",IDC_STARTUP,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,57,72,82,12
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,102,180,10
+    CONTROL         "Use Malay Hijri Dates",IDC_MALAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,114,180,10
+    CONTROL         "Remind important Hijri dates",IDC_REMINDER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,126,180,10
+    LTEXT           "Rotate Lunar Image:",IDC_STATIC,16,141,72,10
+    COMBOBOX        IDC_ROTATE,92,139,112,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Lunar Graphics:",IDC_STATIC,16,156,72,10
+    COMBOBOX        IDC_STYLE,92,154,112,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,50,177,55,14
+    PUSHBUTTON      "Hijri Events...",ID_FILE_REMINDERS,115,177,60,14
 END
 
 
@@ -108,9 +126,9 @@ BEGIN
     IDD_DIALOG, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 190
+        RIGHTMARGIN, 213
         TOPMARGIN, 7
-        BOTTOMMARGIN, 124
+        BOTTOMMARGIN, 191
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -123,15 +141,23 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_ICON9               ICON                    "Galaxy.ico"
-900                     ICON                    "bulan1.ico"
-901                     ICON                    "bulan2.ico"
-902                     ICON                    "bulan3.ico"
-903                     ICON                    "bulan4.ico"
-904                     ICON                    "bulan5.ico"
-905                     ICON                    "bulan6.ico"
-906                     ICON                    "bulan7.ico"
-907                     ICON                    "bulan8.ico"
+IDI_ICON9               ICON                    "../res/Galaxy.ico"
+900                     ICON                    "../res/bulan1.ico"
+901                     ICON                    "../res/bulan2.ico"
+902                     ICON                    "../res/bulan3.ico"
+903                     ICON                    "../res/bulan4.ico"
+904                     ICON                    "../res/bulan5.ico"
+905                     ICON                    "../res/bulan6.ico"
+906                     ICON                    "../res/bulan7.ico"
+907                     ICON                    "../res/bulan8.ico"
+910                     ICON                    "../res/modern/bulan1.ico"
+911                     ICON                    "../res/modern/bulan2.ico"
+912                     ICON                    "../res/modern/bulan3.ico"
+913                     ICON                    "../res/modern/bulan4.ico"
+914                     ICON                    "../res/modern/bulan5.ico"
+915                     ICON                    "../res/modern/bulan6.ico"
+916                     ICON                    "../res/modern/bulan7.ico"
+917                     ICON                    "../res/modern/bulan8.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -160,7 +186,7 @@ BEGIN
             VALUE "FileDescription", "TrayMoon-Display moon phases in System Tray"
             VALUE "FileVersion", "1, 0, 0, 1"
             VALUE "InternalName", "TrayMoon"
-            VALUE "LegalCopyright", "Copyright (C)  mypapit, 2004"
+            VALUE "LegalCopyright", "Copyright \xA9 mypapit, 2004"
             VALUE "LegalTrademarks", "mypapit.net"
             VALUE "OriginalFilename", "TrayMoon.exe"
             VALUE "ProductName", " TrayMoon"

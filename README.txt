@@ -1,7 +1,7 @@
-TrayMoon 1.00, Copyright (C) 2004 Mohammad Hafiz bin Ismail <mypapit@gmail.com>
+TrayMoon 1.10, Copyright © 2004-2026 Mohammad Hafiz bin Ismail <mypapit@gmail.com>
 
-TrayMoon is a system tray application that display the moon phases and the 
-Hijri dates.
+TrayMoon is a system tray application that displays the moon phases, Hijri 
+dates, and reminders for important dates in the Islamic (Hijrah) calendar.
 
 It is a fully open-source software under the terms of the GNU General Public 
 License.
@@ -23,6 +23,16 @@ By default, the program installs itself in to the registry and use the Malay
 version of Hijri Calendar. You can uncheck the option "Use Malay Hijri dates" 
 to use the international spelling  of Hijri month.
 
+New in 1.10:
+- Rotate Lunar Image: Rotate the moon icon by 0, 90, 180, or 270 degrees to 
+  match Northern Hemisphere, Equatorial/Tropical, or Southern Hemisphere views.
+- Lunar Graphics: Switch between Classic Icons, Smooth Silver Moon, and Warm 
+  Gold Moon graphics.
+- Hijri Date Reminders: Receive system tray notifications twice on important 
+  Hijri dates (at 8:00 AM and 12:00 PM) for 1 Muharram, 12 RabiulAwal, 
+  27 Rejab, 1 Ramadan, 17 Ramadan, 1 Syawal, 9-10 Zulhijjah, etc., and browse 
+  the full event list via "Hijri Events...".
+
 
 Some basic Information
 -------------------------
@@ -38,17 +48,10 @@ note : The lunar cycle is about 29.53 days.
 
 
 Project/Author websites :
-http://traymoon.googlecode.com/
+https://github.mypapit.net/traymoon/
 http://blog.mypapit.net/
 
-
 Author's email : mypapit@gmail.com
-
-
-Please support free and  open source software!, visit
-http://www.sourceforge.net
-http://freecode.net/
-http://code.google.com/
 
 
 

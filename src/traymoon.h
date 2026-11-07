@@ -1,7 +1,7 @@
 /*
 	traymoon.h - main header definition file
 
-	Copyright (C) 2004 Mohammad Hafiz bin Ismail
+	Copyright © 2004 Mohammad Hafiz bin Ismail
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -31,6 +31,9 @@ struct tmData{
 	int splash;
 	int malay;
 	int startup;
+	int rotate;
+	int style;
+	int reminder;
 	char appPath[280];
 };
 

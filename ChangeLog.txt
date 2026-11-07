@@ -1,2 +1,8 @@
+2026-11-07 Mohammad Hafiz <mypapit@gmail.com>
+    * Added option to rotate the lunar image (0, 90, 180, 270 degrees)
+    * Added new lunar graphics styles (Smooth Silver Moon, Warm Gold Moon, and Classic Icons) and 32-bit modern icon set
+    * Added important Hijri date reminders (balloon notifications, tooltip, and Hijri Events dialog)
+    * Fixed 1-based month indexing in Hijri month lookup and local time calculation
+
 2004-12-15 Mohammad Hafiz <mypapit@gmail.com>
     * first public release 
